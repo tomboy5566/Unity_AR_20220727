@@ -18,6 +18,8 @@ namespace KuanLun
         private VirtualButtonBehaviour vbbRun;
 
         private string parVictory = "勝利觸發";
+        private string parRun = "跑步觸發";
+        private string parBackword = "後退觸發";
         private AudioSource audBGM;
 
         private void Awake()
@@ -32,6 +34,7 @@ namespace KuanLun
         private void OnRunPressed(VirtualButtonBehaviour obj)
         {
             print("跑起來啊!在混啊!");
+            ani.SetTrigger(parBackword);
         }
 
         private void CardFound()
@@ -48,6 +51,7 @@ namespace KuanLun
         private void Attack()
         {
             print("一定把你鼻樑打斷");
+            ani.SetTrigger(parRun);
         }
     }
 }
